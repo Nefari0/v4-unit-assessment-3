@@ -15,7 +15,15 @@
 */
 
 //CODE HERE
-
+class Character {
+  constructor(name,type) {
+    this.name = name
+    this.type = type
+  }
+  getInfo() {
+    return `This is a ${this.type} character named ${this.name} `
+  }
+}
 //////////////////PROBLEM 2////////////////////
 
 /*
@@ -33,7 +41,14 @@
 */
 
 //CODE HERE
+class NPC extends Character {
+  constructor(name,type,location,phrase) {
+    super(name,type)
 
+    this.location = location
+    this.phrase = phrase
+  }
+}
 /*
     Create an NPC named Ralph who is a human located in Niceland. His phrase should be `I'm gonna wreck it!`. 
     Store your new NPC in a variable called 'ralph'.
